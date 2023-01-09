@@ -6,8 +6,7 @@ type Config struct {
 }
 
 type SiteConfig struct {
-	Name      string
-	Selectors []SelectorConfig
+	Selectors map[string]SelectorConfig
 }
 
 type OutputConfig struct {
@@ -16,6 +15,6 @@ type OutputConfig struct {
 }
 
 type SelectorConfig struct {
-	FieldName string
-	Selector  string
+	CSS       *string
+	Attribute *string
 }
